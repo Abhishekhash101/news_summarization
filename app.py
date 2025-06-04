@@ -66,16 +66,16 @@ def process_article(url, summarizer):
         }
 
 def main():
-    st.set_page_config(page_title="News Summarizer", layout="wide")
-    st.title("News Summarizer")
-    st.write("Enter a news topic to get the latest articles")
+    st.set_page_config(page_title="Short News", layout="wide")
+    st.title("Short News ")
+    st.write("Enter a news topic to get the Short news articles")
 
     st.sidebar.header("Settings")
     num_articles = st.sidebar.slider("Number of Articles", 1, 10, 5)
 
     user_input = st.text_input("News Topic",)
 
-    if st.button("Get Summaries"):
+    if st.button("Get News"):
         if not API_KEY:
             st.error("API key is missing in the code.")
             return
@@ -95,10 +95,10 @@ def main():
             with st.expander(f"{idx}. {article['title']}"):
                 result = process_article(article['url'], summarizer)
                 if result['success']:
-                    st.markdown(f"**Summary:**\n{result['summary']}")
+                    st.markdown(f"**Short News:**\n{result['summary']}")
                 else:
                     st.warning(result['summary'])
-                st.markdown(f"[Read Full Article]({article['url']})")
+                st.markdown(f"[Read Full News]({article['url']})")
 
 if __name__ == "__main__":
     main()
