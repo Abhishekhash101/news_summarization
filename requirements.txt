@@ -5,3 +5,4 @@ transformers
 torch
 lxml[html_clean]
 Pillow
+nest_asyncio
