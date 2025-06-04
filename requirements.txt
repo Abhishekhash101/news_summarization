@@ -1,9 +1,7 @@
-streamlit==1.35.0
-requests==2.32.2
-newspaper3k==0.1.7
-transformers==4.38.2
-torch==2.2.1
-nest_asyncio==1.6.0
-lxml[html_clean]==5.2.1
-Pillow
+streamlit
+requests
 newspaper3k
+transformers
+torch
+lxml[html_clean]
+Pillow
