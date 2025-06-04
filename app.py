@@ -3,7 +3,7 @@ import requests
 from newspaper import Article
 from transformers import pipeline
 
-API_KEY = "8b049a034ec94ca1a58bad5d04ac6d4b" 
+API_KEY = "d1a01c9c66c6466e9b470ca0833ca475" 
 
 @st.cache_resource
 def load_summarizer():
