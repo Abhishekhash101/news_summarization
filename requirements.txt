@@ -1,0 +1,8 @@
+streamlit
+requests
+newspaper3k
+transformers
+torch
+lxml[html_clean]
+Pillow
+ipykernal
