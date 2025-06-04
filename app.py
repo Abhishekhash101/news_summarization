@@ -1,3 +1,11 @@
+import nest_asyncio
+import asyncio
+
+# Fix event loop policy
+if hasattr(asyncio, 'WindowsSelectorEventLoopPolicy'):
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+nest_asyncio.apply()
+
 import streamlit as st
 import requests
 from newspaper import Article
