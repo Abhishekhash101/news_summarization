@@ -5,4 +5,3 @@ transformers
 torch
 lxml[html_clean]
 Pillow
-ipykernal
